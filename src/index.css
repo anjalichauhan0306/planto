@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+body {
+  @apply bg-[#fbfbfb] text-slate-800 antialiased;
+  font-family: 'Inter', sans-serif; /* Ya jo bhi premium font aap prefer karein */
+}
