@@ -1,41 +1,34 @@
 import React from 'react';
 import Navbar from './components/Navbar';
 import HeroSection from './features/Hero/HeroSection';
+import TrendyPlantsSection from './features/Hero/TrendyPlantsSection'; // Sub-folder path check kar lena apne hisab se
 
 function App() {
   return (
-    /* CHANGE 1: min-h-screen kiya taaki content badhne par page stretch ho sake.
-       CHANGE 2: bg-fixed lagaya! Yeh sabse important hai, isse background image screen par chipak jayegi (scroll nahi hogi), 
-       lekin iske upar ka saara content niche scroll hoga.
-    */
+    /* Background configuration aligned to a solid dark base layout */
     <div 
-      className="min-h-screen w-full bg-[url('/assets/background.jpg')] bg-cover bg-[center_top_12%] bg-no-repeat bg-fixed text-white relative flex flex-col"
+      className="min-h-screen w-full bg-[#111A12] bg-[url('/assets/background.jpg')] bg-cover bg-top bg-no-repeat text-white relative flex flex-col overflow-x-hidden"
     >
-      {/* Premium Gradient Mask Overlay (Fixed overlay) */}
-      <div className="fixed inset-0 bg-gradient-to-b from-black/40 via-transparent to-transparent pointer-events-none z-0"></div>
+      {/* Soft overlay mask for premium contrast */}
+      {/* <div className="absolute inset-0 bg-black/20 pointer-events-none z-0"></div> */}
 
-      {/* Fixed Transparent Navbar Layer */}
-      <div className="relative z-20">
+      {/* Navbar layer positioned right at the top layout */}
+      <div className="w-full relative z-20">
         <Navbar />
       </div>
 
-      {/* Hero Section Container (Section 1) */}
-      {/* h-screen ya min-h-[100vh] se hero section pehle screen poori cover karega */}
-        <HeroSection />
-      
-
-      {/* ================= SECTION 2: EXAMPLE FOR TESTING SCROLL ================= */}
-      {/* Jab aap apne baki sections (Our Trendy Plants, Top Selling, etc.) banayenge, 
-          toh unhe yahan niche add karte jana. Ye test section dikhayega ki scroll kaise chal raha hai.
-      */}
-      {/* <section className="w-full max-w-[1600px] mx-auto px-6 md:px-[57px] relative z-10 min-h-screen py-20 bg-[#111e16]/80 backdrop-blur-md">
-        <h2 className="text-4xl font-bold text-center mb-10">Our Trendy Plants Section</h2>
-        <p className="text-gray-400 text-center max-w-xl mx-auto">
-          Ab aap yahan niche scroll kar sakte hain! Aap dekhenge ki background image wahi freeze hai, 
-          lekin ye text aur card sections smoothly upar ki taraf scroll ho rahe hain.
-        </p>
-      </section> */}
-
+      {/* Hero Content Section */}
+      <main className="relative w-full z-10 flex flex-col">
+        {/* Hero layout structure */}
+        <div className="min-h-[calc(100vh-80px)] flex items-center justify-center pt-20">
+          <HeroSection />
+        </div>
+        
+        {/* Trendy Plants Section - Rendered below Hero layout with clean vertical spacing */}
+        <div className="w-full mt-24 xl:mt-36">
+          <TrendyPlantsSection />
+        </div>
+      </main>
     </div>
   );
 }
