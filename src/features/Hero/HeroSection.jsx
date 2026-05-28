@@ -1,13 +1,10 @@
-import React from 'react';
-import { Play, ChevronRight, Star } from 'lucide-react';
+import React from "react";
+import { Play, ChevronRight, Star } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <div className="w-full min-h-[calc(100vh-80px)] max-w-[1600px] mx-auto px-6 md:px-[57px] grid grid-cols-1 xl:grid-cols-12 items-start relative gap-8 pb-14 xl:pb-0">
-
-      {/* ================= LEFT SECTION ================= */}
       <div className="xl:col-span-7 flex flex-col justify-start items-start z-10 mt-16 xl:mt-24 h-full">
-
         <h1
           className="font-semibold tracking-tight text-white leading-[105%]
                      text-[48px] sm:text-[64px] md:text-[76px] lg:text-[88px] 2xl:text-[100px]"
@@ -20,11 +17,10 @@ const HeroSection = () => {
           className="text-gray-300/80 text-[14px] md:text-[16px] xl:text-[17px] leading-[165%] mt-5 max-w-[480px] font-normal"
           style={{ fontFamily: "'Inter', sans-serif" }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </p>
 
-        {/* Buttons */}
         <div className="flex items-center gap-6 mt-8">
           <button
             className="px-8 py-[11px] bg-transparent border border-white/35 hover:border-white/80
@@ -37,7 +33,7 @@ const HeroSection = () => {
 
           <button
             className="flex items-center gap-3 group text-white transition-opacity duration-200"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            style={{ fontFamily: "'Inter'" }}
           >
             <div
               className="w-10 h-10 rounded-full border border-white/35 flex items-center justify-center
@@ -51,16 +47,15 @@ const HeroSection = () => {
           </button>
         </div>
 
-        {/* Testimonial Card - Added higher mt-24/mt-32 to push down as per figma */}
         <div
           style={{
-            background: 'linear-gradient(135deg, rgba(255,255,255,0.065) 0%, rgba(255,255,255,0.012) 100%)',
-            fontFamily: "'Inter', sans-serif",
+            background:
+              "linear-gradient(135deg, rgba(255,255,255,0.065) 0%, rgba(255,255,255,0.012) 100%)",
+            fontFamily: "'Inter',",
           }}
-          className="flex mt-24 xl:mt-32 w-[330px] h-[130px] rounded-[24px] border border-white/10
+          className="flex mt-38 xl:mt-48 w-[330px] h-[130px] rounded-[24px] border border-white/10
                      backdrop-blur-md p-4 items-start gap-3 shadow-2xl shrink-0"
         >
-          {/* Avatar */}
           <div className="w-[46px] h-[46px] rounded-full overflow-hidden shrink-0 border border-white/20">
             <img
               src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80"
@@ -69,27 +64,34 @@ const HeroSection = () => {
             />
           </div>
 
-          {/* Text */}
           <div className="flex flex-col text-left min-w-0">
-            <span className="font-bold text-white text-[15px] leading-tight">alena Patel</span>
+            <span className="font-bold text-white text-[15px] leading-tight">
+              alena Patel
+            </span>
             <div className="flex items-center gap-[2px] mt-[4px]">
               {[...Array(5)].map((_, i) => (
-                <Star key={i} size={11} fill="#f59e0b" stroke="none" className="text-amber-400" />
+                <Star
+                  key={i}
+                  size={11}
+                  fill="#f59e0b"
+                  stroke="none"
+                  className="text-amber-400"
+                />
               ))}
             </div>
             <p className="text-white/45 text-[11px] leading-[145%] mt-[6px] line-clamp-2 pr-1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-              incididunt ut labore...
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore...
             </p>
           </div>
         </div>
       </div>
 
-      {/* ================= RIGHT SECTION: PLANT CARD ================= */}
       <div className="xl:col-span-5 flex justify-center xl:justify-end items-start w-full z-10 mt-32 xl:mt-[140px]">
         <div
           style={{
-            background: 'linear-gradient(180deg, rgba(255,255,255,0.075) 0%, rgba(255,255,255,0.015) 100%)',
+            background:
+              "linear-gradient(180deg, rgba(255,255,255,0.075) 0%, rgba(255,255,255,0.015) 100%)",
           }}
           className="flex flex-col justify-end items-center relative
                      w-full max-w-[310px] xl:max-w-[340px] 2xl:max-w-[370px]
@@ -97,8 +99,6 @@ const HeroSection = () => {
                      rounded-[38px] border border-white/10 backdrop-blur-xl
                      p-6 xl:p-7 shadow-2xl overflow-visible"
         >
-
-          {/* Floating Plant Image */}
           <div
             className="absolute left-1/2 -translate-x-1/2
                        -top-[100px] xl:-top-[115px] 2xl:-top-[130px]
@@ -117,9 +117,10 @@ const HeroSection = () => {
             />
           </div>
 
-          {/* Card Content */}
-          <div className="w-full text-left mb-2 z-10" style={{ fontFamily: "'Inter', sans-serif" }}>
-
+          <div
+            className="w-full text-left mb-2 z-10"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
             <span className="text-[12px] text-white/45 tracking-[0.4px] block font-normal">
               Trendy House Plant
             </span>
@@ -142,17 +143,14 @@ const HeroSection = () => {
               Buy Now
             </button>
 
-            {/* Pagination Dots */}
             <div className="flex justify-center items-center gap-[6px] mt-5">
               <span className="w-[18px] h-[5px] rounded-full bg-white block transition-all duration-300" />
               <span className="w-[5px] h-[5px] rounded-full bg-white/35 block transition-all duration-300" />
               <span className="w-[5px] h-[5px] rounded-full bg-white/35 block transition-all duration-300" />
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
   );
 };
