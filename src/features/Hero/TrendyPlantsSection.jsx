@@ -23,7 +23,7 @@ const TrendyPlantsSection = () => {
   ];
 
   return (
-    <section className="w-full max-w-[1728px] mx-auto px-6 md:px-[120px] pt-4 pb-20 relative z-10 select-none">
+    <section className="w-full max-w-[1728px] mx-auto px-6 md:px-[120px] pt-4 pb-20 relative z-10 select-none ">
       
       <div className="w-full flex justify-center mb-44 mt-0">
         <div className="relative w-[476px] h-[67px] flex items-center justify-center">

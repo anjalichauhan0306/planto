@@ -12,31 +12,34 @@ const ProductGrid = () => {
   ];
 
   return (
-    <section className="w-full max-w-[1728px] mx-auto px-6 sm:px-12 md:px-[140px] py-24 relative z-10">  
-      <div className="w-full flex justify-center mb-40">
-        <div className="relative px-10 py-3 flex items-center justify-center">
-          <div className="absolute -left-2 -top-2 w-8 h-8 pointer-events-none">
-            <svg className="w-full h-full" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M28 4 H14 C8 4 4 8 4 14 V28" stroke="rgba(255,255,255,0.45)" strokeWidth="2.5" strokeLinecap="round"/>
-            </svg>
-          </div>
-          <div className="absolute -right-2 -bottom-2 w-8 h-8 pointer-events-none">
-            <svg className="w-full h-full" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 28 H18 C24 28 28 24 28 18 V4" stroke="rgba(255,255,255,0.45)" strokeWidth="2.5" strokeLinecap="round"/>
-            </svg>
-          </div>
+    <section className="w-full max-w-[1728px] mx-auto relative z-10 bg-transparent">
+      <div className="w-full flex justify-center mb-40 bg-transparent px-6 sm:px-12 md:px-[140px]">
+        <div className="relative px-16 py-8 flex items-center justify-center bg-transparent">
+          <img 
+            src="./assets/image9.png" 
+            alt="decor-left" 
+            className="absolute -left-4 -bottom-4 w-16 h-16 md:w-20 md:h-20 object-contain pointer-events-none bg-transparent"
+          />
+          <img 
+            src="./assets/image.png" 
+            alt="decor-right" 
+            className="absolute -right-4 -top-4 w-16 h-16 md:w-20 md:h-20 object-contain pointer-events-none bg-transparent"
+          />
           <h3 
-            className="text-white text-[32px] md:text-[38px] font-semibold tracking-normal text-center whitespace-nowrap"
+            className="text-white text-[32px] md:text-[46px] font-bold tracking-wide text-center whitespace-nowrap bg-transparent select-none relative z-10"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Our Top Selling
           </h3>
+
         </div>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-32 md:gap-y-36 max-w-[1140px] mx-auto overflow-visible px-4 sm:px-0">
-        {topSellingProducts.map((product) => (
-          <ProductCard key={product.id} product={product} />
-        ))}
+      <div className="w-full bg-[#111A12] py-20 px-6 sm:px-12 md:px-[140px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-8 gap-y-32 md:gap-y-36 max-w-[1140px] mx-auto overflow-visible px-4 sm:px-0">
+          {topSellingProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
     </section>
   );
