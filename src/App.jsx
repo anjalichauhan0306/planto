@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import HeroSection from "./features/Hero/HeroSection";
 import TrendyPlantsSection from "./features/Hero/TrendyPlantsSection";
 import ProductGrid from "./features/Products/ProductGrid"; 
+import CustomerReviews from "./features/Review/CustomerReview"
 
 function App() {
   return (
@@ -23,7 +24,11 @@ function App() {
         <div className="w-full mt-12 md:mt-20">
           <ProductGrid />
         </div>
+        <div className="w-full mt-12 md:mt-20">
+          <CustomerReviews/>
+        </div>
       </main>
+
     </div>
   );
 }
