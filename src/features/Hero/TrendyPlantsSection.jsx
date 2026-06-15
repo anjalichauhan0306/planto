@@ -1,5 +1,3 @@
-import React from "react";
-
 import { ShoppingBag } from "lucide-react";
 
 const TrendyPlantsSection = () => {
@@ -25,7 +23,7 @@ const TrendyPlantsSection = () => {
   return (
     <section className="w-full max-w-[1728px] mx-auto px-6 md:px-[120px] pt-4 pb-20 relative z-10 select-none ">
       
-      <div className="w-full flex justify-center mb-44 mt-0">
+      <div className="w-full flex justify-center mb-44 mt-0 scroll-reveal">
         <div className="relative w-[476px] h-[67px] flex items-center justify-center">
       
           <div className="absolute -left-6 -bottom-6 w-16 h-16 pointer-events-none">
@@ -89,7 +87,7 @@ const TrendyPlantsSection = () => {
                 background:
                   "linear-gradient(180deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%)",
               }}
-              className="w-full rounded-[64px] border border-white/10 backdrop-blur-xl
+              className="figma-card-surface w-full rounded-[64px] border border-white/10 backdrop-blur-xl scroll-reveal
                          grid grid-cols-1 md:grid-cols-12 min-h-[380px]
                          items-center relative shadow-2xl overflow-visible p-8 md:p-0">
               

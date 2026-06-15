@@ -1,10 +1,9 @@
-import React from "react";
 import { Play, ChevronRight, Star } from "lucide-react";
 
 const HeroSection = () => {
   return (
     <div className="w-full min-h-[calc(100vh-80px)] max-w-[1600px] mx-auto px-6 md:px-[57px] grid grid-cols-1 xl:grid-cols-12 items-start relative gap-8 pb-14 xl:pb-0">
-      <div className="xl:col-span-7 flex flex-col justify-start items-start z-10 mt-16 xl:mt-24 h-full">
+      <div className="xl:col-span-7 flex flex-col justify-start items-start z-10 mt-16 xl:mt-24 h-full scroll-reveal">
         <h1
           className="font-semibold tracking-tight text-white leading-[105%]
                      text-[48px] sm:text-[64px] md:text-[76px] lg:text-[88px] 2xl:text-[100px]"
@@ -54,7 +53,7 @@ const HeroSection = () => {
             fontFamily: "'Inter',",
           }}
           className="flex mt-38 xl:mt-48 w-[330px] h-[130px] rounded-[24px] border border-white/10
-                     backdrop-blur-md p-4 items-start gap-3 shadow-2xl shrink-0"
+                     backdrop-blur-md p-4 items-start gap-3 shadow-2xl shrink-0 figma-mini-surface"
         >
           <div className="w-[46px] h-[46px] rounded-full overflow-hidden shrink-0 border border-white/20">
             <img
@@ -87,7 +86,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="xl:col-span-5 flex justify-center xl:justify-end items-start w-full z-10 mt-32 xl:mt-[140px]">
+      <div className="xl:col-span-5 flex justify-center xl:justify-end items-start w-full z-10 mt-32 xl:mt-[140px] scroll-reveal" style={{ "--reveal-delay": "180ms" }}>
         <div
           style={{
             background:
@@ -97,7 +96,7 @@ const HeroSection = () => {
                      w-full max-w-[310px] xl:max-w-[340px] 2xl:max-w-[370px]
                      h-[400px] xl:h-[430px] 2xl:h-[470px]
                      rounded-[38px] border border-white/10 backdrop-blur-xl
-                     p-6 xl:p-7 shadow-2xl overflow-visible"
+                     p-6 xl:p-7 shadow-2xl overflow-visible figma-card-surface"
         >
           <div
             className="absolute left-1/2 -translate-x-1/2

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ShoppingBag } from 'lucide-react';
 
 const ProductCard = ({ product }) => {
@@ -8,10 +7,9 @@ const ProductCard = ({ product }) => {
   const image = product?.image || "https://via.placeholder.com/180";
 
   return (
-    <div
-      className="w-full max-w-[320px] border border-white/[0.06] flex flex-col pt-32 pb-8 px-7 relative shadow-2xl select-none mx-auto group"
+    <article
+      className="figma-card-surface w-full max-w-[320px] border border-white/[0.07] flex flex-col pt-32 pb-8 px-7 relative shadow-2xl select-none mx-auto group scroll-reveal"
       style={{
-        // Figma screenshot ke mutabik customized smooth corner curves
         borderRadius: '50px 50px 40px 40px',
         background: 'linear-gradient(180deg, rgba(28, 36, 29, 0.75) 0%, rgba(17, 22, 18, 0.90) 100%)',
         backdropFilter: 'blur(24px)',
@@ -19,7 +17,7 @@ const ProductCard = ({ product }) => {
       }}
     >
       {/* PLANT IMAGE CONTAINER: Positioned perfectly like the Figma design */}
-      <div className="absolute -top-24 left-1/2 transform -translate-x-1/2 w-[200px] h-[200px] flex items-center justify-center z-20">
+      <div className="absolute -top-24 left-1/2 transform -translate-x-1/2 w-[210px] h-[210px] flex items-center justify-center z-20">
         <img
           src={image}
           alt={title}
@@ -30,7 +28,7 @@ const ProductCard = ({ product }) => {
       {/* CONTENT LAYER */}
       <div className="w-full flex flex-col text-left mt-2 z-10">
         {/* Title */}
-        <h4 className="text-[#e2e8f0] text-[22px] font-medium tracking-wide opacity-95">
+        <h4 className="text-[#e2e8f0] text-[22px] font-medium tracking-normal opacity-95">
           {title}
         </h4>
         
@@ -51,7 +49,7 @@ const ProductCard = ({ product }) => {
           </button>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

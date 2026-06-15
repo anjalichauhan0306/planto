@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Search, ChevronDown, ShoppingBag, Menu } from "lucide-react";
+import { useState } from "react";
+import { ChevronDown, ShoppingBag } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
