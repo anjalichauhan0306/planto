@@ -43,7 +43,7 @@ function App() {
         <div className="w-full relative z-20">
           <Navbar />
         </div>
-        <div className="min-h-[calc(100vh-80px)] flex items-center justify-center pt-20 relative z-10">
+        <div className="flex items-start justify-center pt-20 relative z-10">
           <HeroSection />
         </div>
         <div className="w-full mt-10 xl:mt-12 relative z-10">

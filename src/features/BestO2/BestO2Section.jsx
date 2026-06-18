@@ -24,8 +24,8 @@ const BestO2Section = () => {
         </div>
       </div>
 
-      <div className="best-card figma-card-surface scroll-reveal ">
-        <div className="relative min-h-[270px] md:min-h-110 flex items-end md:items-center justify-center md:justify-start">
+      <div className="best-card figma-card-surface scroll-reveal">
+        <div className="relative min-h-[270px] md:min-h-[440px] flex items-end md:items-center justify-center md:justify-start">
           <img
             src="./assets/rose.png"
             alt="Best O2 plant"
