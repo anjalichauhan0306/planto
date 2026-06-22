@@ -2,7 +2,7 @@ import { Play, ChevronRight, Star } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="w-full relative flex items-center justify-center pt-32 md:pt-40 pb-16 px-6 sm:px-10 md:px-12 xl:px-12 max-w-[1440px] mx-auto select-none overflow-visible">
+    <div className="w-full relative flex items-center justify-center pt-32 md:pt-40 pb-16 px-6 sm:px-10 md:px-12 xl:px-12 max-w-360 mx-auto select-none overflow-visible">
 
       <div className="w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-6 items-start overflow-visible">
 
@@ -16,7 +16,7 @@ const HeroSection = () => {
           </h1>
 
           <p
-            className="text-white/60 text-[14px] sm:text-[15px] leading-[1.6] mt-5 max-w-[520px] font-normal"
+            className="text-white/60 text-[14px] sm:text-[15px] leading-[1.6] mt-5 max-w-130 font-normal"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -26,7 +26,7 @@ const HeroSection = () => {
           {/* Action Buttons */}
           <div className="flex items-center gap-5 mt-7">
             <button
-              className="w-[130px] h-[40px] bg-transparent border border-white/30 hover:border-white rounded-[4px] font-medium text-[14px] text-white tracking-wide transition-all duration-200 cursor-pointer"
+              className="w-32.5 h-10 bg-transparent border border-white/30 hover:border-white rounded-sm font-medium text-[14px] text-white tracking-wide transition-all duration-200 cursor-pointer"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Explore
@@ -37,7 +37,7 @@ const HeroSection = () => {
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               <div className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center bg-white/5 group-hover:bg-white/10 transition-all duration-200">
-                <Play size={12} fill="white" className="ml-[2px] text-white" />
+                <Play size={12} fill="white" className="ml-0.5 text-white" />
               </div>
               <span className="font-medium text-[14px] text-white/70 group-hover:text-white transition-colors duration-200">
                 Live Demo...
@@ -50,7 +50,7 @@ const HeroSection = () => {
             style={{
               background: "linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.01) 100%)",
             }}
-            className="flex mt-24 lg:mt-36 w-full max-w-[270px] rounded-[22px] border border-white/10 backdrop-blur-md p-4 items-start gap-3.5 shadow-xl"
+            className="flex mt-24 lg:mt-36 w-full max-w-67.5 rounded-[22px] border border-white/10 backdrop-blur-md p-4 items-start gap-3.5 shadow-xl"
           >
             <div className="w-9 h-9 rounded-full overflow-hidden shrink-0 border border-white/20">
               <img
@@ -64,7 +64,7 @@ const HeroSection = () => {
               <span className="font-bold text-white text-[12px] tracking-wide">
                 alena Patel
               </span>
-              <div className="flex items-center gap-[2px] mt-0.5">
+              <div className="flex items-center gap-0.5 mt-0.5">
                 {[...Array(5)].map((_, i) => (
                   <Star key={i} size={9} fill="#F59E0B" stroke="none" />
                 ))}
@@ -84,13 +84,13 @@ const HeroSection = () => {
               background: "linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0) 100%)",
             }}
             className="flex flex-col justify-end items-start relative
-                       w-full max-w-[350px] sm:max-w-[380px] lg:w-[420px]
-                       h-[400px] sm:h-[430px] lg:h-[460px]
+                       w-full max-w-87.5 sm:max-w-95 lg:w-105
+                       h-100 sm:h-107.5 lg:h-115
                        rounded-[48px] lg:rounded-[64px] border border-white/10 backdrop-blur-xl
                        p-8 shadow-[0_35px_70px_rgba(0,0,0,0.4)] overflow-visible"
           >
             {/* Absolute Plant Overlap - Height aur positioning scale accurate kiya */}
-            <div className="absolute left-1/2 -translate-x-1/2 -top-[32%] sm:-top-[38%] lg:-top-[160px] w-[90%] sm:w-[86%] lg:w-[390px] aspect-square transition-transform duration-500 hover:scale-[1.02] z-20 overflow-visible">
+            <div className="absolute left-1/2 -translate-x-1/2 top-[-32%] sm:top-[-38%] lg:-top-40 w-[90%] sm:w-[86%] lg:w-97.5 aspect-square transition-transform duration-500 hover:scale-[1.02] z-20 overflow-visible">
               <img
                 src="/assets/rose.png"
                 alt="Calathea Plant"
@@ -114,9 +114,9 @@ const HeroSection = () => {
               </div>
 
               <button
-                className="w-[115px] sm:w-[130px] mt-4 py-2.5 border border-white/20 hover:border-white/50
-                           text-white font-medium rounded-[4px] text-[13px] tracking-wide
-                           bg-white/[0.02] hover:bg-white/[0.06] transition-all duration-200 cursor-pointer"
+                className="w-28.75 sm:w-32.5 mt-4 py-2.5 border border-white/20 hover:border-white/50
+                           text-white font-medium rounded-sm text-[13px] tracking-wide
+                           bg-white/2 hover:bg-white/6 transition-all duration-200 cursor-pointer"
               >
                 Buy Now
               </button>
