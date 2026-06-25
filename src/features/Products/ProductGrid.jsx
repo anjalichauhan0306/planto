@@ -42,11 +42,18 @@ const ProductGrid = () => {
             alt="Right Bracket"
             className="absolute -right-1 -top-1 md:-right-2 md:-top-2 w-10 h-10 md:w-16 md:h-16 object-contain pointer-events-none select-none"
           />
+          </div>
+          </div>
 
-        </div>
-      </div>
-      <div className="w-full bg-[#111A12] pt-24 pb-16 px-4 sm:px-8 md:px-16 lg:px-[100px] xl:px-[140px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 xl:gap-x-8 gap-y-28 sm:gap-y-32 lg:gap-y-40 max-w-[1440px] mx-auto overflow-visible">
+      {/* =========================================
+        PRODUCT CARDS CONTAINER (Figma Dark Theme)
+        =========================================
+      */}
+      <div className="w-full bg-[#111A12] pt-24 pb-16 px-4 sm:px-8 md:px-16 lg:px-[50px] xl:px-[70px]">
+        {/* Yahan gap-y ko perfectly scale kiya hai (Mobile par gap-y-16 aur Desktop par max gap-y-24)
+          taaki card ki nayi height aur lower plant placement ke sath layout tight aur professional dikhe.
+        */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-6 xl:gap-x-8 gap-y-16 sm:gap-y-20 lg:gap-y-28 max-w-[1440px] mx-auto overflow-visible">
           {topSellingProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

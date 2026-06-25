@@ -55,9 +55,7 @@ function App() {
         <div className="w-full mt-12 md:mt-20">
           <ProductGrid />
         </div>
-        <div className="w-full mt-12 md:mt-20">
-          <CustomerReviews/>
-        </div>
+        <CustomerReviews/>
         <BestO2Section />
       </main>
       <Footer />
